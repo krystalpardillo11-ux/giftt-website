@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FacePandook Login</title>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        body {
+            background-color: rgb(161, 23, 30);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        .christmas-decorations {
+            text-align: left;
+            margin-left: 30px;
+       font-size: 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        
+        .login-box {
+            background-color: rgb(16, 110, 32);
+            padding: 40px;
+       
+  margin-right: 160px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-bottom: 30px;
+            animation: slideIn 0.6s ease-in;
+        }
+        
+        label {
+            color: white;
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            animation: slideIn 0.6s ease-in;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        input:focus {
+            outline: none;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #801313;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        button:hover {
+            background-color: #2baa20;
+            transform: translateY(-2px);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="christmas-decorations">
+    <h1>
+            WELCOME TO <br>
+            FACEPANDOOK👋 <br>
+            <br>
+            <br>
+             MERRY CHRISTMAS🎄 <br>
+TO YOU ALL AND A  <br>
+HAPPY NEW YEAR🎉</h1>
+    </div>
+    
+
+    <div class="login-box">
+        <h1 style="color: #ffffff;">
+        Log In to FacePandook</h1>
+        <form>
+            <label>Email</label>
+            <input type="email" required>
+
+            <label>Phone Number</label>
+            <input type="tel" required>
+
+            <label>Username</label>
+            <input type="text" required>
+
+            <label>Password</label>
+            <input type="password" required>
+</form>
+                <button type="submit">Sign In</button>
+            </form>
+        </form>
+    </div>
+ <h1 style="font-size: 80px;">Thank youuuu</h1>
+</body>
+</html>
