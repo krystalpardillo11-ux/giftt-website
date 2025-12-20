@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FacePandook Login</title>
+
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes snow {
+            0% { transform: translateY(-10px); opacity: 0; }
+            100% { transform: translateY(110vh); opacity: 1; }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: radial-gradient(circle at top, #ff3e3e, #4b0f0f);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: white;
+            margin: 0;
+        }
+
+        /* Snow */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            opacity: 0.8;
+            animation: snow linear infinite;
+            text-shadow: 0 0 8px rgba(255,255,255,0.8);
+            pointer-events: none;
+        }
+
+        .snowflake:nth-child(1) { left: 10%; animation-duration: 8s; font-size: 12px; }
+        .snowflake:nth-child(2) { left: 30%; animation-duration: 10s; font-size: 16px; }
+        .snowflake:nth-child(3) { left: 50%; animation-duration: 7s; font-size: 14px; }
+        .snowflake:nth-child(4) { left: 70%; animation-duration: 9s; font-size: 18px; }
+        .snowflake:nth-child(5) { left: 90%; animation-duration: 11s; font-size: 13px; }
+
+        .page {
+            display: flex;
+            gap: 70px;
+            align-items: center;
+            z-index: 2;
+            animation: fadeIn 0.9s ease;
+        }
+
+        .christmas-decorations {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            max-width: 420px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.4);
+        }
+
+        .login-box {
+            position: relative;
+            background: linear-gradient(160deg, #1b7a34, #0f4f22);
+            padding: 45px;
+            border-radius: 18px;
+            width: 350px;
+            box-shadow:
+                0 0 20px rgba(255,255,255,0.3),
+                0 0 40px rgba(255,0,0,0.25),
+                0 20px 40px rgba(0,0,0,0.4);
+            border: 2px solid rgba(255,255,255,0.25);
+        }
+
+        .login-box::before {
+            content: "🎅";
+            position: absolute;
+            top: -22px;
+            right: -18px;
+            font-size: 40px;
+            
+        }
+
+        .login-box h1 {
+            text-align: center;
+            margin-bottom: 28px;
+            text-shadow: 0 0 6px rgba(255,255,255,0.4);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 18px;
+            border-radius: 10px;
+            border: none;
+            font-size: 14px;
+            background: rgba(255,255,255,0.95);
+        }
+
+        input:focus {
+            
+            box-shadow: 0 0 0 2px #ffdddd;
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px rgba(255,0,0,0.4); }
+            50% { box-shadow: 0 0 20px rgba(255,255,255,0.6); }
+            100% { box-shadow: 0 0 10px rgba(255,0,0,0.4); }
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #ff3636, #610d0d);
+            color: white;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            animation: glow 2.5s infinite;
+            transition: transform 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+       
+        .signup-option {
+            margin-top: 18px;
+            text-align: right;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .signup-option a {
+            color: #ffdddd;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .signup-option a:hover {
+            text-decoration: underline;
+        }
+
+        .thank-you {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 42px;
+            opacity: 0.85;
+            text-shadow: 0 0 10px rgba(255,255,255,0.4);
+        }
+
+        @media (max-width: 800px) {
+            .page {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .signup-option {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❄</div>
+
+    <div class="page">
+
+        <div class="christmas-decorations">
+            <h1>
+                WELCOME TO <br>
+                FACEPANDOOK👋 <br><br>
+                MERRY CHRISTMAS🎄 <br>
+                TO YOU ALL AND A <br>
+                HAPPY NEW YEAR🎉
+            </h1>
+        </div>
+
+        <div class="login-box">
+            <h1>Log In to FacePandook</h1>
+
+            <form>
+                <label>Email</label>
+                <input type="email" required>
+
+                <label>Phone Number</label>
+                <input type="tel" required>
+
+                <label>Username</label>
+                <input type="text" required>
+
+                <label>Password</label>
+                <input type="password" required>
+
+                <button type="submit">Sign In</button>
+
+                <div class="signup-option">
+                    No account? <a href="#">Make an account</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="thank-you">
+        Thank youuuu
+    </div>
+
+</body>
+</html>
+
